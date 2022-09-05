@@ -1,0 +1,17 @@
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\bin\Debug\net6.0\OrganizationAccsessLayer.deps.json
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\bin\Debug\net6.0\OrganizationAccsessLayer.runtimeconfig.json
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\bin\Debug\net6.0\OrganizationAccsessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\bin\Debug\net6.0\OrganizationAccsessLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\bin\Debug\net6.0\OrganizationEntityLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\bin\Debug\net6.0\OrganizationEntityLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.csproj.AssemblyReference.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.AssemblyInfoInputs.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.AssemblyInfo.cs
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.csproj.CoreCompileInputs.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.csproj.CopyComplete
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\refint\OrganizationAccsessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\OrganizationAccsessLayer.genruntimeconfig.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationAccsessLayer\obj\Debug\net6.0\ref\OrganizationAccsessLayer.dll

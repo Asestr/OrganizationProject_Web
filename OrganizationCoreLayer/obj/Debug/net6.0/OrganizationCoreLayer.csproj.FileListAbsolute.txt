@@ -1,0 +1,12 @@
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\bin\Debug\net6.0\OrganizationCoreLayer.deps.json
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\bin\Debug\net6.0\OrganizationCoreLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\bin\Debug\net6.0\OrganizationCoreLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.csproj.AssemblyReference.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.AssemblyInfoInputs.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.AssemblyInfo.cs
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\refint\OrganizationCoreLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\OrganizationCoreLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationCoreLayer\obj\Debug\net6.0\ref\OrganizationCoreLayer.dll

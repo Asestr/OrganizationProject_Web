@@ -1,0 +1,118 @@
+﻿@using OrganizationEntityLayer.Event
+@model List<Event>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+<section class="w3l-courses">
+    <div class="blog pb-5" id="courses">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="row">
+                @foreach(var item in Model)
+                {
+
+                    <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="/event/eventdetails/@item.EventId/" class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="~/OrganizationCoreTema/assets/images/c1.jpg"
+                                    alt="Card image cap">
+                            </a>
+                            <div class="post-pos">
+                                <a href="#reciepe" class="receipe blue">Beginner</a>
+                            </div>
+                        </div>
+                        <div class="card-body course-details">
+                            <div class="price-review d-flex justify-content-between mb-1align-items-center">
+                                <p>$35.00</p>
+                                <ul class="rating-star">
+                                    <li><span class="fa fa-star"></span></li>
+                                    <li><span class="fa fa-star"></span></li>
+                                    <li><span class="fa fa-star"></span></li>
+                                    <li><span class="fa fa-star"></span></li>
+                                    <li><span class="fa fa-star-o"></span></li>
+                                </ul>
+                            </div>
+                            <a href="#" id="@item.EventId" class="course-desc">@item.EventExplanation.Substring(0,item.EventExplanation.Substring(0,50).LastIndexOf(" "))...
+                            </a>
+                            <script>
+$('#@item.EventId').click(function() {
+    swal("DETAYLAR!", "@item.EventExplanation");
+});
+                            </script>
+                            <div class="course-meta mt-4">
+                                
+                                <div class="meta-item course-lesson">
+                                    
+
+                                    <span class="fa fa-clock-o" style="color:green"></span>
+                                    <span class="meta-value">@(((DateTime)item.EventStartTime).ToString("dd-MMM-yy")) </span>
+                                </div>
+                                <div class="meta-item course-lesson">
+                                 
+                                    <span class="fa fa-clock-o" style="color:darkred"></span>
+                                    <span class="meta-value">@(((DateTime)item.EventRecourseOverTime).ToString("dd-MMM-yy")) </span>
+                                </div>
+                                <div class="meta-item course-">
+                                    <span class="fa fa-user-o" style="color:black"></span>
+                                    <span class="meta-value"> @item.EventQuota </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="author align-items-center">
+                                <img src="~/OrganizationCoreTema/assets/images/a1.jpg" alt="" class="img-fluid rounded-circle">
+                                <ul class="blog-meta">
+                                    <li>
+                                        <span class="meta-value mx-1">by</span> <a href="#author"> Organizatör
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="meta-value mx-1">in</span> <a href="#author"> @item.CategoryName</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                         
+                    </div>
+                </div>
+                }
+                
+               
+                
+
+                
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination-wrapper mt-5 pt-lg-3 text-center">
+                <ul class="page-pagination">
+                    <li><a class="next" href="#url"><span class="fa fa-angle-left"></span> Prev</a></li>
+                    <li><span aria-current="page" class="page-numbers current">1</span></li>
+                    <li><a class="page-numbers" href="#url">2</a></li>
+                    <li><a class="page-numbers" href="#url">3</a></li>
+                    <li><a class="page-numbers" href="#url">....</a></li>
+                    <li><a class="next" href="#url">Next <span class="fa fa-angle-right"></span></a></li>
+                </ul>
+            </div>
+
+
+</section>
+
+

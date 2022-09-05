@@ -1,0 +1,17 @@
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationBusinessLayer.deps.json
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationBusinessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationBusinessLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationAccsessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationEntityLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationAccsessLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\bin\Debug\net6.0\OrganizationEntityLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.csproj.AssemblyReference.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.AssemblyInfoInputs.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.AssemblyInfo.cs
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.csproj.CopyComplete
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\refint\OrganizationBusinessLayer.dll
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\OrganizationBusinessLayer.pdb
+C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationBusinessLayer\obj\Debug\net6.0\ref\OrganizationBusinessLayer.dll
