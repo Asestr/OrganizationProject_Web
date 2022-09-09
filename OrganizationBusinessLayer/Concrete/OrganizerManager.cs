@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OrganizationBusinessLayer.Concrete
 {
-    public class OrganizerManager : IOrganizerService
+    public class OrganizerManager : IGenericService<Organizer>
 
     {
         IOrganizerDal _organizerDal;
@@ -19,10 +19,33 @@ namespace OrganizationBusinessLayer.Concrete
             _organizerDal = organizerDal;
         }
 
-        public void OrganizerAdd(Organizer organizer)
+        public Organizer GetByID(int id)
         {
+            throw new NotImplementedException();
+        }
 
-            _organizerDal.Insert(organizer);
+       
+
+        public List<Organizer> GetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        
+
+        public void TAdd(Organizer t)
+        {
+            _organizerDal.Insert(t);
+        }
+
+        public void TDelete(Organizer t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Organizer t)
+        {
+            throw new NotImplementedException();
         }
     }
 }

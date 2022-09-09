@@ -1,0 +1,47 @@
+﻿@model OrganizationEntityLayer.Event.Event
+@{
+    ViewData["Title"] = "EditEvent";
+    Layout = "~/Views/Shared/OrganizerLayout.cshtml";
+}
+
+<h1>Event Güncelleme</h1>
+@using(Html.BeginForm("EditEvent","Event",FormMethod.Post))
+{
+@Html.Label("BlogID")
+@Html.TextBoxFor(x=>x.EventId,new{@class="form-control"})
+    @Html.Label("Etkinlik Başlığı")
+    @Html.TextBoxFor(x=>x.EventName, new{@class ="form-control"})
+    
+    <br />
+    @Html.Label("Etkinlik Başlangıç Tarihi")
+    @Html.TextBoxFor(x=>x.EventRecourseOverTime, new{@class ="form-control"})
+    
+   
+    <br />
+    @Html.Label("Etkinlik Açıklaması")
+    @Html.TextAreaFor(x=>x.EventExplanation,15,4, new{@class ="form-control"})
+    
+    <br />
+    @Html.Label("Etkinlik Adres Bilgilerini giriniz")
+    @Html.TextBoxFor(x=>x.EventAddress, new{@class ="form-control"})
+    
+    <br />
+    @Html.Label("Etkinlik Kontenjan Sayısı")
+    @Html.TextBoxFor(x=>x.EventQuota, new{@class ="form-control"})
+   
+    <br />
+    @Html.Label("Etkinlik Ücreti")
+    @Html.TextBoxFor(x=>x.EventCoin, new{@class ="form-control"})
+
+    <br />
+    @Html.Label("Kategori Seç")
+    @Html.TextBoxFor(x=>x.CategoryID, new{@class ="form-control"})
+    @*@Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })*@
+
+    <br />
+    @Html.Label("Şehir ID Başlığı")
+    @Html.TextBoxFor(x=>x.CityID, new{@class ="form-control"})
+    <br />
+    <button href="/Event/GetListByOrganizer" class="btn btn-success">Güncelle</button>
+}
+

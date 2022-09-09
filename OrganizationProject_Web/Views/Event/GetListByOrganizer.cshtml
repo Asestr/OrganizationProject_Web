@@ -1,0 +1,131 @@
+﻿@using OrganizationEntityLayer.Event
+@model List<Event>
+
+@{
+    ViewData["Title"] = "GetListByOrganizer";
+    Layout = "~/Views/Shared/OrganizerLayout.cshtml";
+}
+
+<h1>Organizatörün Etkinlikleri</h1>
+@await Html.PartialAsync("BaseHead")
+<style>
+    .w3l-courses
+    {
+        max-width: 700px;
+        height: 100px;
+
+    }
+    .blog-meta{
+        float: left;
+    }
+
+   
+</style>
+<section class="w3l-courses">
+    <div class="blog pb-3" id="courses">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="card">
+                            <div class="card-header p-0 position-relative">
+                                <a href="/event/eventdetails/@item.EventId/" class="zoom d-block">
+                                    <img class="card-img-bottom d-block" src="~/OrganizationCoreTema/assets/images/c1.jpg"
+                                     alt="Card image cap">
+                                </a>
+                                
+                            </div>
+                           
+                            <div class="card-footer">
+                                <div class="author align-items-center">
+
+                                 <li class="blog-meta">
+                                    <li>
+                                        <span class="meta-value mx-1">Kategori:</span> <a href="#author">
+                                                @item.Category.CategoryName
+                                        </a>
+                                    </li>
+                                  </li>
+
+
+                                    <li class="blog-meta">
+                                    <li>
+                                        <span class="meta-value mx-1">Şehri:</span> <a href="#author">
+                                            @item.City.CityName
+                                        </a>
+                                    </li>
+                                    </li>
+                                    @if (@item.EventTickedOrNotTicked)
+                                    {
+                                    <li class="blog-meta">
+                                    <li>
+                                        <span class="meta-value mx-1">Fiyatı:</span> <a href="#author">
+                                            @item.EventCoin tl
+                                        </a>
+                                    </li>
+                                    </li>
+                                    }
+                                    @if (@item.EventTickedOrNotTicked==false)
+                                    {
+                                        <li class="blog-meta">
+                                        <li>
+                                            <span class="meta-value mx-1">Fiyatı:</span> <a href="#author">
+                                                   Ücretsiz
+
+                                            </a>
+                                        </li>
+                                        </li>
+                                    }
+                                    <li class="blog-meta">
+                                    <li>
+                                        <span class="meta-value mx-1">Başlangıç:</span> <a href="#author">
+                                                @(((DateTime)item.EventRecourseOverTime).ToString("dd-MMM-yy"))
+                                        </a>
+                                    </li>
+                                    </li>
+                                    <li class="blog-meta">
+                                    <li>
+                                        <span class="meta-value mx-1"></span> <a href="#author">
+                                            DETAY
+                                        </a>
+                                    </li>
+                                    </li>
+
+                                    <li class="blog-meta">
+                                    <li>
+                                        <a href="/Event/EventDelete/@item.EventId" class="btn btn-danger">sil</a>
+                                    </li>
+                                    </li>
+
+                                    <li class="blog-meta">
+                                    <li>
+                                        <a href="/Event/EditEvent/@item.EventId" class="btn btn-warning">Güncelle</a>
+                                    </li>
+                                    </li>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</section>
+

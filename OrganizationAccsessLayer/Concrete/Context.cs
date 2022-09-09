@@ -26,19 +26,9 @@ namespace OrganizationAccsessLayer.Concrete
         public DbSet<Category> Categorys { get; set; }
         public DbSet<City> Citys { get; set; }
         public DbSet<Event> Events { get; set; }
-        public DbSet<SubconEvent> SubconEvents { get; set; }
-        public DbSet<OrganEvent> OrganEvents { get; set; }
-        public DbSet<CompanyEvent> CompanyEvents { get; set; }
+    
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder )
-        {
-       
-            modelBuilder.Entity<SubconEvent>().HasKey(x => new { x.EventId, x.SubcontractorMail });
-
-            modelBuilder.Entity<OrganEvent>().HasKey(x => new { x.EventId, x.OrganizerMail });
-            modelBuilder.Entity<CompanyEvent>().HasKey(x => new { x.EventId, x.CompanyName });
-
-        }
+      
 
         
 

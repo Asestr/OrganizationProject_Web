@@ -10,6 +10,7 @@ namespace OrganizationEntityLayer.Event
     public class Organizer
     {
         [Key]
+        public int OrganizerID { get; set; }
         public string OrganizerMail { get; set; }
         public string OrganizerName { get; set; }
         public string OrganizerLastName { get; set; }
@@ -19,7 +20,7 @@ namespace OrganizationEntityLayer.Event
         public string OrganizerPasswordRepeat { get; set; }
 
         public bool OrganizerLoginControl { get; set; }
-       
-        public ICollection<OrganEvent> OrganEvents { get; set; }
+
+        public List<Event> Events { get; set; }
     }
 }

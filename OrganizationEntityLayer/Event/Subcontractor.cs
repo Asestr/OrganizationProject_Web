@@ -10,6 +10,8 @@ namespace OrganizationEntityLayer.Event
     public class Subcontractor
     {
         [Key]
+
+        public int SubcontractorID { get; set; }
         public string SubcontractorMail { get; set; }
         public string SubcontractorName { get; set; }
         public string SubcontractorLastName { get; set; }
@@ -17,7 +19,7 @@ namespace OrganizationEntityLayer.Event
         public string SubcontractorPasswordRepeat { get; set; }
         public bool SubcontractorLoginControl { get; set; }
 
-        public ICollection<SubconEvent> SubconEvents { get; set; }
+      
 
     }
 }

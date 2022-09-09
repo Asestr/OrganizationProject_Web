@@ -38,69 +38,68 @@ namespace OrganizationAccsessLayer.Migrations
 
             modelBuilder.Entity("OrganizationEntityLayer.Event.Category", b =>
                 {
-                    b.Property<string>("CategoryName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("CategoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasKey("CategoryName");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"), 1L, 1);
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CategoryID");
 
                     b.ToTable("Categorys");
                 });
 
             modelBuilder.Entity("OrganizationEntityLayer.Event.City", b =>
                 {
-                    b.Property<string>("CityName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("CityID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasKey("CityName");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CityID"), 1L, 1);
+
+                    b.Property<string>("CityName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CityID");
 
                     b.ToTable("Citys");
                 });
 
             modelBuilder.Entity("OrganizationEntityLayer.Event.Company", b =>
                 {
-                    b.Property<string>("OrganizerName")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("OrganizerLastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("OrganizerLoginControl")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("OrganizerMail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OrganizerPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OrganizerPasswordRepeat")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("OrganizerName");
-
-                    b.ToTable("Company");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.CompanyEvent", b =>
-                {
-                    b.Property<int>("EventId")
+                    b.Property<int>("CompanyID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompanyID"), 1L, 1);
+
+                    b.Property<bool>("CompanyLoginControl")
+                        .HasColumnType("bit");
+
                     b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(450)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("OrganizerName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("CompanyPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("EventId", "CompanyName");
+                    b.Property<string>("CompanyPasswordRepeat")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("OrganizerName");
+                    b.Property<string>("CompanyrMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("CompanyEvents");
+                    b.HasKey("CompanyID");
+
+                    b.ToTable("Company");
                 });
 
             modelBuilder.Entity("OrganizationEntityLayer.Event.Event", b =>
@@ -111,30 +110,18 @@ namespace OrganizationAccsessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EventId"), 1L, 1);
 
-                    b.Property<string>("Admin")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
 
-                    b.Property<string>("AdminsAdminName")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CategorysCategoryName")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CityName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CitysCityName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("CityID")
+                        .HasColumnType("int");
 
                     b.Property<string>("EventAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EventCoin")
+                        .HasColumnType("int");
 
                     b.Property<string>("EventExplanation")
                         .IsRequired()
@@ -153,39 +140,33 @@ namespace OrganizationAccsessLayer.Migrations
                     b.Property<DateTime>("EventStartTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("EventStatus")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("EventTickedOrNotTicked")
                         .HasColumnType("bit");
 
+                    b.Property<int>("OrganizerID")
+                        .HasColumnType("int");
+
                     b.HasKey("EventId");
 
-                    b.HasIndex("AdminsAdminName");
+                    b.HasIndex("CategoryID");
 
-                    b.HasIndex("CategorysCategoryName");
+                    b.HasIndex("CityID");
 
-                    b.HasIndex("CitysCityName");
+                    b.HasIndex("OrganizerID");
 
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("OrganizationEntityLayer.Event.OrganEvent", b =>
-                {
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("OrganizerMail")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("EventId", "OrganizerMail");
-
-                    b.HasIndex("OrganizerMail");
-
-                    b.ToTable("OrganEvents");
-                });
-
             modelBuilder.Entity("OrganizationEntityLayer.Event.Organizer", b =>
                 {
-                    b.Property<string>("OrganizerMail")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("OrganizerID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrganizerID"), 1L, 1);
 
                     b.Property<string>("OrganizerLastName")
                         .IsRequired()
@@ -193,6 +174,10 @@ namespace OrganizationAccsessLayer.Migrations
 
                     b.Property<bool>("OrganizerLoginControl")
                         .HasColumnType("bit");
+
+                    b.Property<string>("OrganizerMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OrganizerName")
                         .IsRequired()
@@ -206,30 +191,18 @@ namespace OrganizationAccsessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("OrganizerMail");
+                    b.HasKey("OrganizerID");
 
                     b.ToTable("Organizers");
                 });
 
-            modelBuilder.Entity("OrganizationEntityLayer.Event.SubconEvent", b =>
-                {
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SubcontractorMail")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("EventId", "SubcontractorMail");
-
-                    b.HasIndex("SubcontractorMail");
-
-                    b.ToTable("SubconEvents");
-                });
-
             modelBuilder.Entity("OrganizationEntityLayer.Event.Subcontractor", b =>
                 {
-                    b.Property<string>("SubcontractorMail")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("SubcontractorID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubcontractorID"), 1L, 1);
 
                     b.Property<string>("SubcontractorLastName")
                         .IsRequired()
@@ -237,6 +210,10 @@ namespace OrganizationAccsessLayer.Migrations
 
                     b.Property<bool>("SubcontractorLoginControl")
                         .HasColumnType("bit");
+
+                    b.Property<string>("SubcontractorMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SubcontractorName")
                         .IsRequired()
@@ -250,90 +227,36 @@ namespace OrganizationAccsessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SubcontractorMail");
+                    b.HasKey("SubcontractorID");
 
                     b.ToTable("Subcontractors");
                 });
 
-            modelBuilder.Entity("OrganizationEntityLayer.Event.CompanyEvent", b =>
+            modelBuilder.Entity("OrganizationEntityLayer.Event.Event", b =>
                 {
-                    b.HasOne("OrganizationEntityLayer.Event.Event", "Event")
-                        .WithMany("CompanyEvents")
-                        .HasForeignKey("EventId")
+                    b.HasOne("OrganizationEntityLayer.Event.Category", "Category")
+                        .WithMany("Events")
+                        .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OrganizationEntityLayer.Event.Company", "Organizer")
-                        .WithMany("CompanyEvents")
-                        .HasForeignKey("OrganizerName");
-
-                    b.Navigation("Event");
-
-                    b.Navigation("Organizer");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.Event", b =>
-                {
-                    b.HasOne("OrganizationEntityLayer.Event.Admin", "Admins")
+                    b.HasOne("OrganizationEntityLayer.Event.City", "City")
                         .WithMany("Events")
-                        .HasForeignKey("AdminsAdminName");
-
-                    b.HasOne("OrganizationEntityLayer.Event.Category", "Categorys")
-                        .WithMany("Events")
-                        .HasForeignKey("CategorysCategoryName");
-
-                    b.HasOne("OrganizationEntityLayer.Event.City", "Citys")
-                        .WithMany("Events")
-                        .HasForeignKey("CitysCityName");
-
-                    b.Navigation("Admins");
-
-                    b.Navigation("Categorys");
-
-                    b.Navigation("Citys");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.OrganEvent", b =>
-                {
-                    b.HasOne("OrganizationEntityLayer.Event.Event", "Event")
-                        .WithMany("OrganEvents")
-                        .HasForeignKey("EventId")
+                        .HasForeignKey("CityID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("OrganizationEntityLayer.Event.Organizer", "Organizer")
-                        .WithMany("OrganEvents")
-                        .HasForeignKey("OrganizerMail")
+                        .WithMany("Events")
+                        .HasForeignKey("OrganizerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Event");
+                    b.Navigation("Category");
+
+                    b.Navigation("City");
 
                     b.Navigation("Organizer");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.SubconEvent", b =>
-                {
-                    b.HasOne("OrganizationEntityLayer.Event.Event", "Event")
-                        .WithMany("SubconEvents")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OrganizationEntityLayer.Event.Subcontractor", "Subcontractor")
-                        .WithMany("SubconEvents")
-                        .HasForeignKey("SubcontractorMail")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Event");
-
-                    b.Navigation("Subcontractor");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.Admin", b =>
-                {
-                    b.Navigation("Events");
                 });
 
             modelBuilder.Entity("OrganizationEntityLayer.Event.Category", b =>
@@ -346,28 +269,9 @@ namespace OrganizationAccsessLayer.Migrations
                     b.Navigation("Events");
                 });
 
-            modelBuilder.Entity("OrganizationEntityLayer.Event.Company", b =>
-                {
-                    b.Navigation("CompanyEvents");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.Event", b =>
-                {
-                    b.Navigation("CompanyEvents");
-
-                    b.Navigation("OrganEvents");
-
-                    b.Navigation("SubconEvents");
-                });
-
             modelBuilder.Entity("OrganizationEntityLayer.Event.Organizer", b =>
                 {
-                    b.Navigation("OrganEvents");
-                });
-
-            modelBuilder.Entity("OrganizationEntityLayer.Event.Subcontractor", b =>
-                {
-                    b.Navigation("SubconEvents");
+                    b.Navigation("Events");
                 });
 #pragma warning restore 612, 618
         }

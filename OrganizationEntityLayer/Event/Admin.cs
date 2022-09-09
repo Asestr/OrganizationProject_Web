@@ -13,6 +13,6 @@ namespace OrganizationEntityLayer.Event
         public string AdminName { get; set; }
         public string AdminPassword { get; set; }
 
-        public List<Event> Events { get; set; }
+     
     }
 }

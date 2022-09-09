@@ -15,20 +15,48 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\eceti\source\repos\OrganizationProject_Web\OrganizationProject_Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Event/EditEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRWRpdEV2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Event/EventADD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRXZlbnRBREQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Event/GetListByOrganizer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcR2V0TGlzdEJ5T3JnYW5pemVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Event/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/OrganizerDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Organizer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Organizer/organizerPartialFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyXG9yZ2FuaXplclBhcnRpYWxGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Organizer/organizerPartialNavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyXG9yZ2FuaXplclBhcnRpYWxOYXZCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Organizer/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyXFRlc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Register/Index.cshtml]
@@ -37,6 +65,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/BaseHead.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJhc2VIZWFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/Components/OrganizerMessageNotification/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcT3JnYW5pemVyTWVzc2FnZU5vdGlmaWNhdGlvblxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/Components/OrganizerNotification/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcT3JnYW5pemVyTm90aWZpY2F0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/Error.cshtml]
@@ -51,12 +87,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRlcjEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/OrganizerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE9yZ2FuaXplckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/UserLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFVzZXJMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/_404/Error1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcXzQwNFxFcnJvcjEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/eceti/source/repos/OrganizationProject_Web/OrganizationProject_Web/Views/_ViewImports.cshtml]

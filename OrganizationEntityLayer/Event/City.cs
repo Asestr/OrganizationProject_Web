@@ -10,6 +10,7 @@ namespace OrganizationEntityLayer.Event
     public class City
     {
         [Key]
+        public int CityID { get; set; }
         public String CityName { get; set; }
         public List<Event> Events { get; set; }
 

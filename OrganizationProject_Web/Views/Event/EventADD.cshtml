@@ -1,0 +1,49 @@
+﻿@model OrganizationEntityLayer.Event.Event
+@{
+    ViewData["Title"] = "EventADD";
+    Layout = "~/Views/Shared/OrganizerLayout.cshtml";
+}
+<h1>Etkinlik Oluştuma Sayfası</h1>
+<br />
+@using(Html.BeginForm("EventADD","Event",FormMethod.Post))
+{
+    @Html.Label("Etkinlik Başlığı")
+    @Html.TextBoxFor(x=>x.EventName, new{@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.EventName)
+    <br />
+    @Html.Label("Etkinlik Başlangıç Tarihi")
+    @Html.TextBoxFor(x=>x.EventRecourseOverTime, new{@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.EventRecourseOverTime)
+    <br />
+    @*@Html.Label("Etkinlik Oluşturma Tarihi")
+    @Html.TextBoxFor(x=>x.EventStartTime, new{@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.EventStartTime)*@
+    <br />
+    @Html.Label("Etkinlik Açıklaması")
+    @Html.TextAreaFor(x=>x.EventExplanation,15,4, new{@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.EventExplanation)
+    <br />
+    @Html.Label("Etkinlik Adres Bilgilerini giriniz")
+    @Html.TextBoxFor(x=>x.EventAddress, new{@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.EventAddress)
+    <br />
+    @Html.Label("Etkinlik Kontenjan Sayısı")
+    @Html.TextBoxFor(x=>x.EventQuota, new{@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.EventQuota)
+    <br />
+    @Html.Label("Etkinlik Ücreti")
+    @Html.TextBoxFor(x=>x.EventCoin, new{@class ="form-control"})
+   
+    <br />
+    @Html.Label("Kategori Seç")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
+    
+    <br />
+    @Html.Label("Şehir ID Başlığı")
+    @Html.TextBoxFor(x=>x.CityID, new{@class ="form-control"})
+    @*@Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.civ, new { @class = "form-control" })*@
+   
+    <br />
+    <button class="btn btn-info">Etkinlik Oluştur</button>
+}
+

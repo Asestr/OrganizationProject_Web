@@ -10,16 +10,13 @@ namespace OrganizationEntityLayer.Event
     public class Company
     {
         [Key]
-        public string OrganizerName { get; set; }
-        public string OrganizerMail { get; set; }
-        public string OrganizerLastName { get; set; }
-        public string OrganizerPassword { get; set; }
-        public string OrganizerPasswordRepeat { get; set; }
-        public bool OrganizerLoginControl { get; set; }
-        public ICollection<CompanyEvent> CompanyEvents
-        {
-            get; set;
-
-        }
+        public int CompanyID { get; set; }
+        public string CompanyName { get; set; }
+        public string CompanyrMail { get; set; }
+       
+        public string CompanyPassword { get; set; }
+        public string CompanyPasswordRepeat { get; set; }
+        public bool CompanyLoginControl { get; set; }
+       
     }
 }

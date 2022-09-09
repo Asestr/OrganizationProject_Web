@@ -19,30 +19,23 @@ namespace OrganizationEntityLayer.Event
         public string EventExplanation { get; set; }
         public string EventAddress { get; set; }
         public int EventQuota { get; set; }
+        public int EventCoin { get; set; }
         public bool EventTickedOrNotTicked { get; set; }
+        public bool EventStatus { get; set; }
 
-        [ForeignKey("Category")]
-        public string CategoryName { get; set; }
-        public Category Categorys { get; set; }
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
 
-        [ForeignKey("City")]
-        public string CityName { get; set; }
-        public City Citys { get; set; }
+        public int CityID { get; set; }
+        public City City { get; set; }
 
-        [ForeignKey("Admin")]
-        public string Admin { get; set; }
-        public Admin Admins { get; set; }
+        public int OrganizerID { get; set; }
+        public Organizer Organizer { get; set; }
 
        
+      
 
-        public ICollection<SubconEvent> SubconEvents { get; set; }
-        public ICollection<OrganEvent> OrganEvents { get; set; }
-        public ICollection<CompanyEvent> CompanyEvents
-        {
-            get; set;
 
-        }
 
-        
     }
 }

@@ -3,6 +3,7 @@ using OrganizationAccsessLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace OrganizationAccsessLayer.Repositories
             c.SaveChanges();
         }
 
-        public List<T> GetAllList()
+        public List<T> GetListAll()
         {
             using var c = new Context();
             return c.Set<T>().ToList();
@@ -48,6 +49,12 @@ namespace OrganizationAccsessLayer.Repositories
             using var c = new Context();
             c.Update(t);
             c.SaveChanges();
+        }
+
+        public List<T> GetListAll(Expression<Func<T, bool>> filter)
+        {
+            using var c = new Context();
+            return c.Set<T>().Where(filter).ToList();
         }
     }
 }

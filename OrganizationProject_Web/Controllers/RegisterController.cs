@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OrganizationAccsessLayer.EntityFramework;
 using OrganizationBusinessLayer.Concrete;
@@ -9,6 +10,7 @@ namespace OrganizationProject_Web.Controllers
 {
     public class RegisterController : Controller
     {
+        
         OrganizerManager om = new OrganizerManager(new EfOrganizerRepository());
         [HttpGet]
         public IActionResult Index()
@@ -24,7 +26,7 @@ namespace OrganizationProject_Web.Controllers
             if (result.IsValid)
             {
                 o.OrganizerLoginControl = true;
-                om.OrganizerAdd(o);
+                om.TAdd(o);
                 return RedirectToAction("Index", "Event");
             }
             else

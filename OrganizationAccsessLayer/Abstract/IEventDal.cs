@@ -10,5 +10,9 @@ namespace OrganizationAccsessLayer.Abstract
     public interface IEventDal:IGenericDal<Event>
     {
         List<Event> GetListWithOrganizer();
+        List<Event> GetListWithCategory();
+        List<Event> GetListWithCategoryByOrganizer(int id);
+
+
     }
 }

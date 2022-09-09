@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewComponent\" />
-    <Folder Include="Views\Home\Controllara bağlı actionların türetildiği wiewleri tutar\" />
     <Folder Include="Views\tüketiciye sunulduğu - frontend kısmı\" />
   </ItemGroup>
 

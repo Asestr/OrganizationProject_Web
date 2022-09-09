@@ -1,4 +1,6 @@
-﻿using OrganizationAccsessLayer.Abstract;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Logging;
+using OrganizationAccsessLayer.Abstract;
 
 using OrganizationBusinessLayer.Abstract;
 using OrganizationEntityLayer.Event;
@@ -13,46 +15,57 @@ namespace OrganizationBusinessLayer.Concrete
     public class EventManager : IEventService
     {
         IEventDal _eventDal;
-       
-        
-        
-            public EventManager(IEventDal eventDal)
+
+
+
+        public EventManager(IEventDal eventDal)
         {
             _eventDal = eventDal;
         }
 
-        
-
-        public void EventAdd(Event eventAdd)
-        {
-            _eventDal.Insert(eventAdd);
-        }
-
-        public void EventDelete(Event eventDelete)
-        {
-            _eventDal.Delete(eventDelete);
-        }
-
-       
-
-        public void EventUpdate(Event eventUpdate)
-        {
-            _eventDal.Update(eventUpdate);
-        }
-
-        public Event GetEventID(int id)
+        public Event GetByID(int id)
         {
             return _eventDal.GetByID(id);
         }
 
+        public List<Event> GetEventListOrganizer(int id)
+        {
+            return _eventDal.GetListAll(x => x.OrganizerID == id);
+        }
+        public List<Event> GetEventListCategoryByOrganizer(int id)
+        {
+            return _eventDal.GetListWithCategoryByOrganizer(id);
+        }
         public List<Event> GetList()
         {
-            return _eventDal.GetAllList();
+            return _eventDal.GetListAll();
         }
 
         public List<Event> GetListEventWithOrganizer()
         {
             return _eventDal.GetListWithOrganizer();
         }
+
+        public List<Event> GetListEventWithCategory()
+        {
+            return _eventDal.GetListWithCategory();
+        }
+
+        public void TAdd(Event t)
+        {
+            _eventDal.Insert(t);
+        }
+
+        public void TDelete(Event t)
+        {
+            _eventDal.Delete(t);
+        }
+
+        public void TUpdate(Event t)
+        {
+            _eventDal.Update(t);
+        }
+
+       
     }
 }
